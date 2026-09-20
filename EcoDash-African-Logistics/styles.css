@@ -1,0 +1,38 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#dfe9d8, #c9d7bc);
+  color: #1f2a1f;
+}
+.app { max-width: 1100px; margin: auto; padding: 20px; }
+.site-header { display: flex; justify-content: space-between; gap: 15px; align-items: center; margin-bottom: 15px; }
+.site-header h1 { margin: 0; font-size: 42px; }
+.site-header p { margin: 5px 0 0; }
+.badge { background: #26372b; color: white; padding: 8px 12px; border-radius: 999px; font-size: 12px; }
+.screen { background: rgba(255,255,255,.95); padding: 30px; border-radius: 16px; text-align: center; box-shadow: 0 7px 24px rgba(0,0,0,.15); }
+.menu-screen h2 { margin-top: 0; font-size: 30px; }
+.mission-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 25px 0; }
+.mission-grid div { background: #eef4ea; border-radius: 10px; padding: 13px; }
+.mission-grid strong, .mission-grid span { display: block; }
+.mission-grid span { margin-top: 5px; font-size: 13px; }
+button { border: 0; border-radius: 8px; padding: 12px 20px; margin: 6px; cursor: pointer; font-weight: bold; background: #d7dfd0; color: #1f2a1f; }
+button:hover { transform: translateY(-1px); }
+button.primary { background: #26372b; color: white; }
+.controls { margin-top: 20px; font-size: 14px; }
+.hud { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; background: white; padding: 10px; border-radius: 10px; margin-bottom: 10px; box-shadow: 0 3px 12px rgba(0,0,0,.1); }
+.hud span { background: #eef4ea; padding: 7px 9px; border-radius: 6px; font-size: 13px; }
+canvas { width: 100%; max-width: 960px; display: block; margin: auto; background: #d8c48f; border: 3px solid #273c2a; border-radius: 10px; }
+#message { text-align: center; font-weight: bold; min-height: 22px; }
+.hidden { display: none; }
+@media (max-width: 780px) {
+  .site-header { flex-direction: column; align-items: flex-start; }
+  .mission-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .app { padding: 10px; }
+  .site-header h1 { font-size: 32px; }
+  .mission-grid { grid-template-columns: 1fr; }
+  .hud { font-size: 11px; }
+}

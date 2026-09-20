@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoDash - African Logistics Simulator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="site-header">
+      <div>
+        <h1>EcoDash</h1>
+        <p>African Digital Logistics &amp; Infrastructure Simulator</p>
+      </div>
+    </header>
+
+    <section id="menu" class="screen menu-screen">
+      <h2>Solar Delivery Mission</h2>
+      <p>Deliver essential medical supplies to a rural clinic while managing battery power and infrastructure hazards.</p>
+      <div class="mission-grid">
+        <div><strong>Mission</strong><span>Medical delivery</span></div>
+        <div><strong>Energy</strong><span>Solar microgrid</span></div>
+        <div><strong>Hazards</strong><span>Potholes - Floods - Trees</span></div>
+        <div><strong>Conditions</strong><span>Wind - Rain - Load-shedding</span></div>
+      </div>
+      <button id="startBtn" class="primary">Start Mission</button>
+      <div class="controls"><strong>Controls:</strong> WASD / Arrow Keys to move - P to pause</div>
+    </section>
+
+    <section id="gameScreen" class="hidden">
+      <div class="hud">
+        <span>Score: <b id="score">0</b></span>
+        <span>Battery: <b id="battery">100%</b></span>
+        <span>Distance: <b id="distance">0 km</b></span>
+        <span>Efficiency: <b id="efficiency">100%</b></span>
+        <span>Weather: <b id="weather">Clear</b></span>
+        <span>Solar Power: <b id="powerStatus">ON</b></span>
+        <span>High Score: <b id="highScore">0</b></span>
+        <button id="pauseBtn">Pause</button>
+      </div>
+      <canvas id="gameCanvas" width="960" height="540" aria-label="EcoDash simulation"></canvas>
+      <p id="message">Deliver the medical supplies to the clinic.</p>
+    </section>
+
+    <section id="pauseScreen" class="screen hidden">
+      <h2>Mission Paused</h2>
+      <p>Your vehicle is safely paused.</p>
+      <button id="resumeBtn" class="primary">Resume</button>
+      <button id="restartBtn1">Restart</button>
+    </section>
+
+    <section id="gameOverScreen" class="screen hidden">
+      <h2 id="gameOverTitle">Mission Complete</h2>
+      <p id="finalStats"></p>
+      <button id="restartBtn2" class="primary">Restart Mission</button>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
